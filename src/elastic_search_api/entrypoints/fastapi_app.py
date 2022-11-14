@@ -1,4 +1,6 @@
-from fastapi import Body, FastAPI, Depends
+from typing import List
+
+from fastapi import Body, Depends, FastAPI
 
 from ..service_layer import services
 from . import dependencies, schemas
@@ -19,7 +21,7 @@ async def add_index(index: str, docs_bulk = Body()):
     "/indices/{index}", 
     tags=["indices"],
     description="Поиск подстроки по всем полям индекса",
-
+    responses=schemas.get_examples
 )
 async def search_substring_in_index(params: schemas.SearchParams = Depends()):
     ep = dependencies.ep

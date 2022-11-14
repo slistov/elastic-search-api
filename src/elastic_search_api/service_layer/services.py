@@ -14,4 +14,5 @@ async def add_doc_to_index(ep: ElasticProvider, index_name, docs_bulk):
 
 
 async def search_index_for_text(ep: ElasticProvider, index, text):
-    return await ep.search(index=index, text=text, fields=["*"])
+    response = await ep.search(index=index, text=text, fields=["*"])
+    return response
