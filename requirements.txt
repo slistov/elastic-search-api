@@ -2,3 +2,5 @@ fastapi[all]
 elasticsearch[async]==8.4.3
 pytest
 pydantic
+
+git+https://github.com/slistov/elastic-search-lib.git@0.1.0#egg=elastic_search_lib
