@@ -1,19 +1,28 @@
-from fastapi import Body, FastAPI
+from fastapi import Body, FastAPI, Depends
 
 from ..service_layer import services
-from . import dependencies
+from . import dependencies, schemas
 
 app = FastAPI()
 
-@app.put("/indices/{index}")
-async def api_indexes_add(index: str, docs_bulk = Body()):
+@app.put(
+    "/indices/{index}",
+    tags=["indices"],
+    description="Индексироват документ (добавить документ в индекс)"
+)
+async def add_index(index: str, docs_bulk = Body()):
     ep = dependencies.ep
     return await services.add_doc_to_index(ep, index, docs_bulk)
 
 
-@app.get("/indices/{index}")
-async def api_search_index_for_text(index, text):
+@app.get(
+    "/indices/{index}", 
+    tags=["indices"],
+    description="Поиск подстроки по всем полям индекса",
+
+)
+async def search_substring_in_index(params: schemas.SearchParams = Depends()):
     ep = dependencies.ep
-    return await services.search_index_for_text(ep, index, text)
+    return await services.search_index_for_text(ep, params.index, params.text)
 
 
