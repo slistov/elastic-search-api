@@ -1,4 +1,4 @@
-from elastic_search_lib import ElasticProvider
+from elastic_search_lib.services import ElasticProvider
 from elasticsearch import AsyncElasticsearch
 
 from .. import config

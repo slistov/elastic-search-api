@@ -10,10 +10,10 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "elastic.entrypoints.fastapi_app:app"
+                "src.elastic_search_api.entrypoints.fastapi_app:app"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": false
         }
     ]
 }

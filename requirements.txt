@@ -1,7 +1,7 @@
 wheel
 fastapi[all]
-elasticsearch[async]==8.4.3
+elasticsearch[async]==8.5.0
 pytest
 pydantic
 
-git+https://github.com/slistov/elastic-search-lib.git#egg=elastic-search-lib
+elastic-search-lib @ git+https://github.com/slistov/elastic-search-lib.git#egg=elastic-search-lib
