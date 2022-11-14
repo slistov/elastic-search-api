@@ -1,12 +1,7 @@
-from elasticsearch import AsyncElasticsearch
-from fastapi import Body, Depends, FastAPI, Response, status
-from fastapi.encoders import jsonable_encoder
+from fastapi import Body, FastAPI
 
-import elastic.entrypoints.schemas as schemas
-
-from .. import config
 from ..service_layer import services
-from . import dependencies 
+from . import dependencies
 
 app = FastAPI()
 

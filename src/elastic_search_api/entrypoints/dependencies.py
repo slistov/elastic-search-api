@@ -1,11 +1,7 @@
-from typing import List
-
-from fastapi import Depends, Header, HTTPException
-
-from ..service_layer import services
-from ..adapters.repository import ElasticIndexRepository
-from .. import config
+from elastic_search_lib import ElasticProvider
 from elasticsearch import AsyncElasticsearch
+
+from .. import config
 
 user, password = config.get_es_user_credentials()
 es = AsyncElasticsearch(
@@ -14,4 +10,4 @@ es = AsyncElasticsearch(
     verify_certs=False
 )
 
-elastic_repo = ElasticIndexRepository(es)
+ep = ElasticProvider(es)

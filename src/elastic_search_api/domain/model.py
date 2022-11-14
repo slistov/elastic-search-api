@@ -1,4 +1,4 @@
-from ..mappings.quote import quote_mappings, quote_settings
+from .quote_mappings import quote_mappings, quote_settings
 
 
 class Index:
