@@ -1,0 +1,14 @@
+###########################
+#    elastic-search-api   #
+###########################
+
+# API endpoints
+ROOT_PATH: "/api"
+QUOTES_PATH: "/quotes"
+
+
+# ELASTICSEARCH
+# 
+# indices' names
+QUOTES_INDEX: 'quotes-index'
+OTHER_INDEX: 'other-index'
