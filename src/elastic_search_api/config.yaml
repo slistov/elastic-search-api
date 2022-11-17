@@ -9,6 +9,8 @@ QUOTES_PATH: "/quotes"
 
 # ELASTICSEARCH
 # 
+# USE .env to provide ELASTIC_USER and ELASTIC_PASSWORD
+#
 # indices' names
 QUOTES_INDEX: 'quotes-index'
 OTHER_INDEX: 'other-index'

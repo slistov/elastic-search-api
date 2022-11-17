@@ -1,6 +1,5 @@
 wheel
 fastapi[all]
-elasticsearch[async]==8.5.0
 pytest
 pydantic
 
