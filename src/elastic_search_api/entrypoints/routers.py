@@ -1,3 +1,5 @@
+from typing import List
+
 from fastapi import APIRouter, Body, Depends
 
 from .. import config
@@ -28,7 +30,8 @@ async def add_index(docs_bulk=Body()):
     "/",
     tags=["quotes"],
     description="Поиск подстроки по всем полям индекса",
-    responses=schemas.get_examples
+    response_model=List[schemas.Quote]
+    # responses=schemas.get_examples
 )
 async def search_substring_in_index(params: schemas.SearchParams = Depends()):
     ep = dependencies.ep
