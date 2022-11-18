@@ -22,7 +22,7 @@ async def add_doc_to_index(
 ):
     """Index bulk of docs
 
-    Adds docs to index"""
+    Adds several docs (bulk) into index"""
     try:
         await ep.get_index_by_name(index)
     except Exception:
