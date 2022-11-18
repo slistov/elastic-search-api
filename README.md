@@ -28,7 +28,7 @@ The REST API to the example app is described below.
 `GET /quotes`
 
     curl -i -H 'Accept: application/json' http://localhost:8000/api/quotes/?text=erm
-    
+
 ### Response
 
     HTTP/1.1 200 OK
