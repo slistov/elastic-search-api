@@ -5,5 +5,4 @@ __pycache__/
 .pytest_cache/
 *.tar
 *.gz
-.env
 *.egg-info/
